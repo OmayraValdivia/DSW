@@ -16,9 +16,9 @@ if (isset($_POST['insertar'])) {
         $sql = "INSERT INTO autos (make, year, mileage) VALUES (:mk, :yr, :mi)";
         $stmt = $conn->prepare($sql);
         $stmt->execute(array(
-            ':mk' => $_POST['make'],
-            ':yr' => $_POST['year'],
-            ':mi' => $_POST['mileage'])
+            ':mk' => htmlentities($_POST['make']),
+            ':yr' => htmlentities($_POST['year']),
+            ':mi' => htmlentities($_POST['mileage']))
             );
         $_SESSION['success'] = "Registro insertado";
         header("Location: view.php");
