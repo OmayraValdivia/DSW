@@ -11,7 +11,7 @@ define('RUTA_APP', dirname(dirname(__FILE__)));
 
 //Ruta URL, por si tenemos que cambiar de servidor
 //define("RUTA_URL", "http://192.168.56.101/proyecto_mvc_omayra");
-define("RUTA_URL", "http://books.appingnet.com/");
+define("RUTA_URL", "http://books.appingnet.com");
 
 //Nombre del proyecto
 define("NOMBRE_SITIO", "Proyecto MVC Omayra DSW");
