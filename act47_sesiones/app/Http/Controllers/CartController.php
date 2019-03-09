@@ -60,9 +60,11 @@ class CartController extends Controller
     public function total(){
       $cart = \Session::get('cart');
       $total = 0;
-      foreach ($cart as $item) {
-        $total += $item->price * $item->quantityCart;
+      if(!empty($cart)){
+        foreach ($cart as $item) {
+          $total += $item->price * $item->quantityCart;
+        }
+        return $total;
       }
-      return $total;
     }
 }

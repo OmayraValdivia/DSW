@@ -18,7 +18,7 @@
                 </ul>
                 <ul class="navbar-nav navbar-right">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('cart-show')}}"><i class="fa fa-shopping-cart"></i></a>
+                        <a class="nav-link" href="{{route('cart-show')}}"><i class="fa fa-shopping-cart"></i> <span class="badge badge-dark">@if(!empty($cart)){{count($cart)}}@endif</span></a>
                     </li>
                 </ul>
             </div>

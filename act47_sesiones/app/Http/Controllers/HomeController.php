@@ -15,8 +15,9 @@ class HomeController extends Controller
     public function index()
     {
         //
+        $cart = \Session::get('cart');
         $products = Product::all();
-        return view('product.index', compact('products'));
+        return view('product.index', compact('products','cart'));
     }
 
     /**
