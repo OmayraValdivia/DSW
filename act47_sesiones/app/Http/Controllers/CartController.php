@@ -57,14 +57,12 @@ class CartController extends Controller
     }
 
     //Total
-    public function total(){
+    private function total(){
       $cart = \Session::get('cart');
       $total = 0;
-      if(!empty($cart)){
         foreach ($cart as $item) {
           $total += $item->price * $item->quantityCart;
         }
         return $total;
-      }
     }
 }
